@@ -1,11 +1,19 @@
 {
-  "name": "office-finder",
-  "version": "0.1.0",
-  "private": true,
+  "name": "officefinder-github.io",
+  "version": "1.0.0",
+  "author": "Nachimuthu Vellingiri",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
+  },
+  "publishConfig": { 
+    "registry": "https://npm.pkg.github.com/vnmuthu",
+    "strict-ssl": false
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/vnmuthu/officefinder-github.io"
   },
   "dependencies": {
     "core-js": "^3.6.5",
