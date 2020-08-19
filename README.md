@@ -5,9 +5,10 @@
 npm install
 ```
 
-## Run server.js
-
+### Run server.js
+```
 npx nodemon server.js
+```
 
 ### Compiles and hot-reloads for development
 ```
