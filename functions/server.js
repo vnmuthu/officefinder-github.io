@@ -6,7 +6,6 @@ const cors = require("cors");
 const jwt = require("jsonwebtoken");
 const app = express();
 const bodyParser = require('body-parser');
-const port = 3000;
 
 app.use(cors());
 app.use(express.json());
@@ -45,10 +44,6 @@ router.post('/login', (request, response) => {
       })
     }
 });
-
-router.listen(port, () => {
-    console.log(`Express.js app listening`);
-  });
 
 // app.get("/", (request, response) => {
 //   response.send("Server is Running...");
