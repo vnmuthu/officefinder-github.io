@@ -16,7 +16,7 @@ router.get('/', (request, response) => {
     response.send("Server is Running...");
 });
 
-router.post('/login', (request, response) => {
+router.post('/', (request, response) => {
     const USER = {
       username: 'jamie',
       password: 'qwerty@123'
