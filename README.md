@@ -5,9 +5,9 @@
 npm install
 ```
 
-### Run server.js
+### Run server.js for user authentication
 ```
-npx nodemon server.js
+npm run express
 ```
 
 ### Compiles and hot-reloads for development
