@@ -1,9 +1,9 @@
-require("dotenv").config();
+require('dotenv').config();
 const serverless = require('serverless-http');
-const express = require("express");
+const express = require('express');
 const path = require('path');
-const cors = require("cors");
-const jwt = require("jsonwebtoken");
+const cors = require('cors');
+const jwt = require('jsonwebtoken');
 const app = express();
 const bodyParser = require('body-parser');
 
@@ -32,7 +32,7 @@ router.post('/', (request, response) => {
         password: 'jamie',
         homeLocation: 'Paris'
       }
-      const token = jwt.sign(dbUser, "MY_SECRET_KEY");
+      const token = jwt.sign(dbUser, 'MY_SECRET_KEY');
       response.json({
         token,
         dbUser

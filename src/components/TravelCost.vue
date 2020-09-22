@@ -39,7 +39,7 @@ export default {
     },
 
     methods: {
-        ...mapMutations (["setFlightCost", "setCheapFlightCostFlag"]),
+        ...mapMutations (['setFlightCost', 'setCheapFlightCostFlag']),
 
         submitPreference(e) {
             e.preventDefault();
@@ -66,7 +66,9 @@ export default {
             const response = await fetch(`https://api.skypicker.com/flights?fly_from=${flyFrom}&fly_to=${flyTo}&partner=picky&sort=price&limit=10`)
             const flightData = await response.json();
             const responseData = flightData.data;
-            const priceStartingFrom = Math.min.apply(null, responseData.map( x => x.price));
+            const priceList = responseData.map(x => x.price);
+            const priceStartingFrom = Math.min(...priceList)
+
             this.setCheapFlightCost(flyTo, priceStartingFrom);
         },
 
