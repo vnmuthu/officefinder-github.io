@@ -29,7 +29,8 @@ export default {
     async userLogin(e) {
       e.preventDefault();
       // Prod Path: /.netlify/functions/server
-      const response = await fetch('http://localhost:3000/login', {
+      // Dev Path: http://localhost:3000/login
+      const response = await fetch('/.netlify/functions/server', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
