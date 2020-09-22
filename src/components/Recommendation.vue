@@ -71,8 +71,8 @@ export default {
                     if (userWeatherList.length > 1) {
                         const minTempList = userWeatherList.map(({ min }) => min);
                         const maxTempList = userWeatherList.map(({ max }) => max);
-                        userMinTemperature = Math.min.apply(Math, minTempList);
-                        userMaxTemperature = Math.max.apply(Math, maxTempList);
+                        userMinTemperature = Math.min(...minTempList);
+                        userMaxTemperature = Math.max(...maxTempList);
                     } else {
                         userMinTemperature = userWeatherList && userWeatherList[0].min;
                         userMaxTemperature = userWeatherList && userWeatherList[0].max;
@@ -91,7 +91,7 @@ export default {
                     recommededCities = cityWeatherTravelPreference;
                 }
 
-                recommededCities.sort(function(a, b) {
+                recommededCities.sort((a, b) => {
                     return a.flightCost - b.flightCost;
                 });
             }
@@ -104,7 +104,7 @@ export default {
         deepFlattenData() {
             let cityWeatherTravelList = [];
 
-            CITIES.forEach((i)=> {
+            CITIES.forEach((i) => {
                 let cityObj = {};
 
                 cityObj.name = i.city;
@@ -128,8 +128,8 @@ export default {
 
         getUserWeatherList(selectionList) {
             let temperatureList = [];
-            selectionList.forEach((selectedItem)=> {
-                WEATHER.conditions.forEach((weatherItem)=> {
+            selectionList.forEach((selectedItem) => {
+                WEATHER.conditions.forEach((weatherItem) => {
                     if (selectedItem === weatherItem.value) {
                         temperatureList.push(weatherItem.temperature);
                     }
