@@ -16,7 +16,7 @@
         </div>
         <div v-else class="no-office">
             <h1>Sorry! No office location is suitable for your preference!</h1>
-            <router-link to="/">Start Over</router-link>
+            <router-link to="/">Start Over!</router-link>
         </div>
     </div>
 </template>
