@@ -11,7 +11,7 @@
                     <span class="max">{{ Math.round(this.recommendedCity.weather.Maximum.Value) }}</span>
                 </div>
                 <div v-if="isCheapFlightCostEnabled && cheapFlightCost" class="price">Price from <span>&euro;{{ cheapFlightCost }}</span></div>
-                <div class="reset"><router-link to="/">Start Over</router-link></div>
+                <div class="reset"><router-link to="/">Start Over!</router-link></div>
             </div>
         </div>
         <div v-else class="no-office">
