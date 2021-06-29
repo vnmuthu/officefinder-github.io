@@ -8,6 +8,10 @@
 
 Find your right location to work and live based on your weather and travel preferences.
 
+Login Credentials: jamie / qwerty@123 (At the moment server has only one user data to validate)
+
+This app has been developed in 4 hours. So I didnt handle errors in login.
+
 ## Development Highlights:
 
 - A simple office finder app which is developed using Vue 2.6.11
